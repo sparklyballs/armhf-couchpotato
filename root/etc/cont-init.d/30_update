@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bash
+
+[[ ! -d "/app/couchpotato/.git" ]] && git clone https://github.com/RuudBurger/CouchPotatoServer.git /app/couchpotato
+
+mkdir -p /var/log/couchpotato
+chown -R mab:mab /app
+chmod 777 /var/log/couchpotato
+
+# opt out for autoupdates
+[ "$ADVANCED_DISABLEUPDATES" ] && exit 0
+
+cd /app/couchpotato
+git pull
+chown -R mab:mab /app
+
