@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 
-[[ ! -d "/app/couchpotato/.git" ]] && git clone https://github.com/RuudBurger/CouchPotatoServer.git /app/couchpotato
+[[ ! -d "/app/couchpotato/.git" ]] && git clone https://github.com/CouchPotato/CouchPotatoServer /app/couchpotato
 
 mkdir -p /var/log/couchpotato
 chown -R mab:mab /app
