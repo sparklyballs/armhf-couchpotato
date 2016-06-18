@@ -3,7 +3,7 @@
 [[ ! -d "/app/couchpotato/.git" ]] && git clone https://github.com/CouchPotato/CouchPotatoServer /app/couchpotato
 
 mkdir -p /var/log/couchpotato
-chown -R mab:mab /app
+chown -R abc:abc /app
 chmod 777 /var/log/couchpotato
 
 # opt out for autoupdates
@@ -11,5 +11,5 @@ chmod 777 /var/log/couchpotato
 
 cd /app/couchpotato
 git pull
-chown -R mab:mab /app
+chown -R abc:abc /app
 
